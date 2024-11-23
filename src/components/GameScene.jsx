@@ -28,17 +28,15 @@ const GameScene = () => {
 
     function preload() {
       this.load.setBaseURL('https://labs.phaser.io');
-      this.load.image('ball', 'assets/sprites/shinyball.png'); // Ball image
-      this.load.image('background', 'assets/skies/space3.png'); // Background image
+      this.load.image('ball', 'assets/sprites/shinyball.png');
+      this.load.image('background', 'assets/skies/space3.png'); 
     }
 
     function create() {
-      // Add the background image
       const background = this.add.image(0, 0, 'background');
-      background.setOrigin(0, 0); // Align the background to the top-left corner
-      background.setDisplaySize(400, 400); // Resize to match the game dimensions
+      background.setOrigin(0, 0);
+      background.setDisplaySize(400, 400); 
 
-      // Add the ball
       ball = this.physics.add.image(200, 200, 'ball');
       ball.setCollideWorldBounds(true);
       ball.setBounce(1);
